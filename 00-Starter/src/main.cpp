@@ -14,8 +14,6 @@ int main()
     window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(30);
 
-
-
     while (window.isOpen())
     {
         

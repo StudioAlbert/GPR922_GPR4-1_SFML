@@ -28,6 +28,7 @@ int main()
     // set the text style
     text.setStyle(sf::Text::Bold | sf::Text::Underlined);
 
+    text.setOrigin(text.getLocalBounds().width / 2, text.getLocalBounds().height / 2);
 
     // Basic Setup of the window
     // Vertical sync, framerate
@@ -37,7 +38,8 @@ int main()
     while (window.isOpen())
     {
 
-        // on inspecte tous les évènements de la fenêtre qui ont été émis depuis la précédente itération
+
+    	// on inspecte tous les évènements de la fenêtre qui ont été émis depuis la précédente itération
         sf::Event event;
 
         while (window.pollEvent(event))
@@ -52,6 +54,10 @@ int main()
                 break;
 
             case sf::Event::KeyPressed:
+                break;
+
+            case sf::Event::MouseMoved:
+                text.setPosition(event.mouseMove.x, event.mouseMove.y);
                 break;
 
             default:

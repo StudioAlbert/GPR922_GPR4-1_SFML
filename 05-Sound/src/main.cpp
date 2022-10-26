@@ -95,7 +95,6 @@ int main()
                     if (event.key.shift) {
                         std::cout << "Tiouuuuu ***************************" << std::endl;
                         sound.setBuffer(soundFx1);
-                        sound.play();
                     }
                     else {
                         std::cout << "Driiing ***************************" << std::endl;

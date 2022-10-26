@@ -2,7 +2,7 @@
 
 #include "SFML/Graphics.hpp"
 
-constexpr float speed = 2.0f;
+constexpr float SPEED = 2.0f;
 
 class FireBall : public sf::Transformable, public sf::Drawable
 {

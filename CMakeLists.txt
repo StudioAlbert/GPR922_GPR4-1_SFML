@@ -43,5 +43,11 @@ add_subdirectory ("07-Fireball")
 set(EXECUTABLE_CUSTOM_NAME "08-TransformableDrawable")
 add_subdirectory ("08-TransformableDrawable")
 
+set(EXECUTABLE_CUSTOM_NAME "08-TransformableDrawable-Zelda")
+add_subdirectory ("08-TransformableDrawable-Zelda")
+
 set(EXECUTABLE_CUSTOM_NAME "hero")
 add_subdirectory ("hero")
+
+set(EXECUTABLE_CUSTOM_NAME "_Formatives-VeraMolnar")
+add_subdirectory ("_Formatives-VeraMolnar")

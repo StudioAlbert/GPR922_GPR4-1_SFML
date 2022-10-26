@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 
 #include "game.h"
@@ -16,7 +14,7 @@ void Game::Init() {
     // Vertical sync, framerate
     window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(30);
-        
+
     m_placeholderTexture.loadFromFile("data/missile/missile_0.png");
     m_placeholder.setTexture(m_placeholderTexture);
     m_placeholder.setOrigin(m_placeholderTexture.getSize().x * 0.5f, m_placeholderTexture.getSize().y * 0.5f);
@@ -41,14 +39,14 @@ int Game::Loop()
             switch (event.type)
             {
 
-            // évènement "fermeture demandée" : on ferme la fenêtre
+                // évènement "fermeture demandée" : on ferme la fenêtre
             case sf::Event::Closed:
                 window.close();
                 break;
 
             case sf::Event::MouseMoved:
                 if (event.mouseMove.x < 0 || event.mouseMove.x > window.getSize().x
-                    || event.mouseMove.y < 0 || event.mouseMove.y > window.getSize().y) 
+                    || event.mouseMove.y < 0 || event.mouseMove.y > window.getSize().y)
                 {
                     window.setMouseCursorVisible(true);
                 }
@@ -72,7 +70,7 @@ int Game::Loop()
             case sf::Event::MouseButtonReleased:
 
                 missileManager.AddMissile(
-                    sf::Vector2f(static_cast<float>(wSize.x) * 0.5f, static_cast<float>(wSize.y) * 0.5f), 
+                    sf::Vector2f(static_cast<float>(wSize.x) * 0.5f, static_cast<float>(wSize.y) * 0.5f),
                     sf::Vector2f(event.mouseButton.x, event.mouseButton.y)
                 );
 
